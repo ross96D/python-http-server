@@ -105,3 +105,8 @@ class Request(metaclass=ABCMeta):
     def protocol(self) -> str:
         """Returns the request method"""
         pass
+
+    @abstractmethod
+    def path(self) -> str:
+        """Returns the request path"""
+        pass

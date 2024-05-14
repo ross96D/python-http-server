@@ -7,7 +7,7 @@ class Request(interfaces.Request):
         pass
 
     def parse(self, data: bytes):
-        print(data)
+        raise Exception("unimplemented")
 
     def headers(self) -> interfaces.Headers:
         raise Exception("unimplemented")
@@ -21,11 +21,5 @@ class Request(interfaces.Request):
     def protocol(self) -> str:
         raise Exception("unimplemented")
 
-
-def main():
-    req = Request()
-    req.parse(data=bytes([1, 2, 3]))
-
-
-if __name__ == "__main__":
-    main()
+    def path(self) -> str:
+        raise Exception("unimplemented")
