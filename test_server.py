@@ -22,8 +22,5 @@ def teardown_module(module):
 
 
 def test_server():
-    try:
-        resp = httpx.get("http://localhost:8123")
-        assert resp.headers.get("content-length", "0") == "0"
-    except Exception as e:
-        print(e)
+    resp = httpx.get("http://localhost:8123")
+    assert resp.headers.get("content-length", "0") == "0"
