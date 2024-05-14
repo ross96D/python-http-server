@@ -15,3 +15,9 @@ run the following commands
     # Install the required dependencies
     pip install -r requirements.txt
 ```
+
+## Run the tests
+
+```shell
+    python -m pytest .
+```
